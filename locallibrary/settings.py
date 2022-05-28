@@ -1,5 +1,6 @@
 import environ
 import os 
+import django_heroku
 
 from pathlib import Path
 
@@ -120,6 +121,9 @@ STATICFILES_DIRS = [
     BASE_DIR / "catalog/static",
 ]
 
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = 'media_root'
 
@@ -136,3 +140,5 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+django_heroku.settings(locals())
