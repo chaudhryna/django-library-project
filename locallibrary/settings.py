@@ -1,6 +1,5 @@
 import environ
-import os 
-import django_heroku
+import os
 
 from pathlib import Path
 
@@ -140,5 +139,3 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
-
-django_heroku.settings(locals())
