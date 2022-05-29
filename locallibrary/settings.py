@@ -17,7 +17,7 @@ DEBUG = env('DEBUG')
 
 SECRET_KEY = env('SECRET_KEY')
 
-ALLOWED_HOSTS = ['https://git.heroku.com/local-library-nac.git', localhost, '127.0.0.1']
+ALLOWED_HOSTS = ['https://git.heroku.com/local-library-nac.git', 'localhost', '127.0.0.1']
 
 
 # Application definition
