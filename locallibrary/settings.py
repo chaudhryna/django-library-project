@@ -3,17 +3,19 @@ import os
 
 from pathlib import Path
 
-env = environ.Env(
-    DEBUG=(bool, False)
-)
+# env = environ.Env(
+#     DEBUG=(bool, False)
+# )
+
+DEBUG=False
 
 environ.Env.read_env()
-
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-DEBUG = env('DEBUG')
+# DEBUG = env('DEBUG')
+DEBUG = True
 
 SECRET_KEY = env('SECRET_KEY')
 
